@@ -1,0 +1,42 @@
+/* shade */
+.shade{
+    opacity: 0;
+    visibility: hidden;
+
+
+}
+.shade.show{
+    visibility: visible;
+    animation:shade 1s linear forwards;
+
+
+}
+.shade img{
+    background-color:#ffd56a;
+    box-shadow: 10px 10px #a44a8b;
+    position:relative;
+    bottom:-100px;
+}
+.shade img.show{
+    animation:shade_img 1.5s linear forwards;
+
+}
+@keyframes shade {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+
+    }
+
+}
+@keyframes shade_img{
+    0%{
+        bottom:-100px;
+    }
+    100%{
+        bottom:0px;
+    }
+}
